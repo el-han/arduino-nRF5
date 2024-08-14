@@ -21,6 +21,38 @@ menu.version=Version
 menu.lfclk=Low Frequency Clock
 menu.board_variant=Board Variant
 
+# nRF52811 variants
+###################
+
+Pricetag_nRF52811.name=Pricetag nRF52811
+
+Pricetag_nRF52811.upload.tool=sandeepmistry:openocd
+Pricetag_nRF52811.upload.target=nrf52
+Pricetag_nRF52811.upload.maximum_size=524288
+
+Pricetag_nRF52811.bootloader.tool=sandeepmistry:openocd
+
+Pricetag_nRF52811.build.mcu=cortex-m4
+Pricetag_nRF52811.build.f_cpu=64000000
+Pricetag_nRF52811.build.board=GENERIC
+Pricetag_nRF52811.build.core=nRF5
+Pricetag_nRF52811.build.variant=Pricetag
+Pricetag_nRF52811.build.variant_system_lib=
+Pricetag_nRF52811.build.extra_flags=-DNRF52811_XXAA
+Pricetag_nRF52811.build.float_flags=
+Pricetag_nRF52811.build.ldscript=nrf52811_xxaa.ld
+
+Pricetag_nRF52811.menu.softdevice.none=None
+Pricetag_nRF52811.menu.softdevice.none.softdevice=none
+Pricetag_nRF52811.menu.softdevice.none.softdeviceversion=
+
+Pricetag_nRF52811.menu.lfclk.lfxo=Crystal Oscillator
+Pricetag_nRF52811.menu.lfclk.lfxo.build.lfclk_flags=-DUSE_LFXO
+Pricetag_nRF52811.menu.lfclk.lfrc=RC Oscillator
+Pricetag_nRF52811.menu.lfclk.lfrc.build.lfclk_flags=-DUSE_LFRC
+Pricetag_nRF52811.menu.lfclk.lfsynt=Synthesized
+Pricetag_nRF52811.menu.lfclk.lfsynt.build.lfclk_flags=-DUSE_LFSYNT
+
 # nRF52833 variants
 ###################
 
